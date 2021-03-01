@@ -8,34 +8,32 @@
    <link rel="stylesheet" type="text/css" href="./css/main.css">
    
    <title>Frontend Mentor | Todo app</title>
-
-   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-   <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-   </style>
 </head>
 <body>
-   <div>
+   <div class="header-bg">
    </div>
 
-   <main>
-      <div>
-         <h1>Todo</h1>
-         <span></span>
+   <main id="todo">
+      <div class="top">
+         <h1 class="app-name">Todo</h1>
+         <span class="theme-switch"></span>
       </div>
-      <form>
-         <input>
-      </form>
-      <div>
-         <ul>
-            <li></li>
+      <div class="todo-form">
+         <label for="new-todo"></label>
+         <input id="new-todo" type="text" placeholder="Create a new todo..." 
+            aria-label="NewTodo">
+      </div>
+      <div class="todos">
+         <ul class="todo-items">
+            <li class="todo-items"></li>
          </ul>
-         <div>
-            <span><!-- Add dynamic number --> items left</span>
-            <span>Clear Completed</span>
+         <div class="todo-actions">
+            <span id="todoCounter" class="todo-counter">
+               <!-- Add dynamic number --> items left
+            </span>
+            <span id="todoClear" class="todo-clear">Clear Completed</span>
          </div>
-         <div>
+         <div class="todo-filter">
             <span>All</span>
             <span>Active</span>
             <span>Completed</span>
@@ -49,6 +47,6 @@
       Coded by <a href="#">Jo Kelechi </a>.
    </div>
    
-   <script src="./js/main.js"></script>
+   <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
