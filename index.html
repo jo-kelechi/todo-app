@@ -16,16 +16,16 @@
          <span class="theme-switch" onclick="setDark()"></span>
       </div>
       <div class="todo-form">
-         <label for="new-todo"></label>
-         <input id="new-todo" type="text" placeholder="Create a new todo..." 
-            aria-label="NewTodo">
+         <label for="todoInput"></label>
+         <input id="todoInput" type="text" placeholder="Create a new todo..." 
+            aria-label="NewTodo" onkeydown="newTodo(event)">
       </div>
       <div class="todos">
-         <ul class="todo-items">
-            <li class="todo-item">
+         <ul id="todoItems" class="todo-items">
+            <!-- <li class="todo-item">
                <p>Complete Todo App</p>
                <span class="close"></span>
-            </li>
+            </li> -->
          </ul>
          <div class="todo-actions">
             <span id="todoCounter" class="todo-counter">
