@@ -39,7 +39,7 @@ main#todo {
    height: 26px;
    float: right;
    cursor: pointer;
-   margin-top: -32px;
+   margin-top: -35px;
    background: url(../images/icon-moon.svg) no-repeat;
 }
 
@@ -131,7 +131,7 @@ ul li p {
 .todo-filter {
    position: absolute;
    text-align: center;
-   margin: -32px 0 0 170px;
+   margin: -62px 0 0 170px;
 }
 
 .todo-filter span {
@@ -160,7 +160,19 @@ body.dark-mode .theme-switch {
 }
 
 body.dark-mode .todos, body.dark-mode .todo-form {
-   background: hsl(235, 24%, 19%);
+   background-color: hsl(235, 24%, 19%);
+}
+
+body.dark-mode .todo-form label, body.dark-mode ul li::before {
+   border: 1px solid hsl(233, 14%, 35%);
+}
+
+body.dark-mode .todo-items .todo-item {
+   border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+body.dark-mode .todo-filter {
+   background-color: hsl(235, 24%, 19%);
 }
 
 
@@ -176,20 +188,25 @@ body.dark-mode .todos, body.dark-mode .todo-form {
    }
 
    .todo-filter {
+      font-weight: 700;
       margin: 30px auto;
       padding: 18px 20px;
       position: relative;
+      border-radius: 5px;
       background: inherit;
+      background-color: white;
    }
 }
 
 @media only screen and (max-width: 375px) {
    body {
       background: url(../images/bg-mobile-light.jpg) top left no-repeat;
+      background-color: hsl(0, 0%, 98%);
    }
 
    body.dark-mode {
       background: url(../images/bg-mobile-dark.jpg) top left no-repeat;
+      background-color: hsl(235, 21%, 11%);
    }
 
    main#todo {
