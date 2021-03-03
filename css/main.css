@@ -14,12 +14,11 @@ body {
 }
 
 main#todo {
-   top: 270px;
-   left: 50%;
+   top: 100px;
+   margin: 0 auto;
    width: 500px;
    font-size: 12px;
-   position: absolute;
-   transform: translate(-50%, -50%);
+   position: relative;
 }
 
 .top {
@@ -210,7 +209,7 @@ body.dark-mode .todo-filter {
    }
 
    main#todo {
-      top: 210px;
+      top: 20px;
       width: 340px;
    }
 
@@ -230,5 +229,12 @@ body.dark-mode .todo-filter {
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+   bottom: 0; 
+   left: 50%; 
+   font-size: 11px; 
+   text-align: center;
+   position: absolute; 
+   transform: translate(-50%, -50%);
+}
 .attribution a { color: hsl(228, 45%, 44%); }
