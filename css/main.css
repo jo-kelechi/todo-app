@@ -3,6 +3,8 @@
    padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
 body {
    background: url(../images/bg-desktop-light.jpg) top left no-repeat;
    background-color: hsl(0, 0%, 98%);
@@ -72,7 +74,6 @@ input {
    margin: 5px 0 30px 0;
    border-radius: 5px;
    background: white;
-   color: hsl(235, 19%, 35%);
 }
 
 .todo-items .todo-item {
@@ -95,6 +96,7 @@ ul li::before {
 
 ul li.checked::before {
    background: url(../images/icon-check.svg) no-repeat;
+   background-color: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 }
 
 ul li p {
@@ -119,6 +121,7 @@ ul li p {
 
 .todo-actions .todo-clear {
    float: right;
+   cursor: pointer;
 }
 
 .todo-actions, .todo-filter, #todo > p {
@@ -133,6 +136,11 @@ ul li p {
 
 .todo-filter span {
    margin: 0 8px;
+   cursor: pointer;
+}
+
+.todo-filter span:hover, .todo-clear:hover {
+   color: hsl(220, 98%, 61%);
 }
 
 #todo > p {
@@ -151,6 +159,28 @@ body.dark-mode .theme-switch {
    background: url(../images/icon-sun.svg) no-repeat;
 }
 
+body.dark-mode .todos, body.dark-mode .todo-form {
+   background: hsl(235, 24%, 19%);
+}
+
+
+/* Mobile screen styling */
+
+@media only screen and (max-width: 375px) {
+   body {
+      background: url(../images/bg-mobile-light.jpg) top left no-repeat;
+   }
+
+   body.dark-mode {
+      background: url(../images/bg-mobile-dark.jpg) top left no-repeat;
+   }
+
+   .todo-filter {
+      height: 50px;
+      margin-top: 80px;
+      background: inherit;
+   }
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
