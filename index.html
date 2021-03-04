@@ -9,7 +9,7 @@
    
    <title>Frontend Mentor | Todo app</title>
 </head>
-<body id="body">
+<body id="body" onload="countTodos()">
    <main id="todo">
       <div class="top">
          <h1 class="app-name">Todo</h1>
@@ -22,14 +22,10 @@
       </div>
       <div class="todos">
          <ul id="todoItems" class="todo-items">
-            <!-- <li class="todo-item">
-               <p>Complete Todo App</p>
-               <span class="close"></span>
-            </li> -->
          </ul>
          <div class="todo-actions">
-            <span id="todoCounter" class="todo-counter">
-               <!-- Add dynamic number --> items left
+            <span class="todo-counter">
+               <label id="todoCounter"></label> items left
             </span>
             <span id="todoClear" class="todo-clear">Clear Completed</span>
          </div>
