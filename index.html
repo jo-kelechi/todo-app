@@ -30,17 +30,19 @@
             <span id="todoClear" class="todo-clear">Clear Completed</span>
          </div>
       </div>
-      <div class="todo-filter">
-         <span>All</span>
-         <span>Active</span>
-         <span>Completed</span>
+      <div id="todoFilter" class="todo-filter">
+         <span class="active" onclick="filterTodos('all')">All</span>
+         <span onclick="filterTodos('active')">Active</span>
+         <span onclick="filterTodos('completed')">Completed</span>
       </div>
       <p>Drag and drop to reorder list</p>
    </main>    
 
    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Jo Kelechi </a>.
+      Challenge by 
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by 
+      <a href="#">Jo Kelechi </a>.
    </div>
    
    <script type="text/javascript" src="./js/main.js"></script>
