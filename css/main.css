@@ -77,7 +77,7 @@ input {
    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
-.todo-items .todo-item {
+ul li, .todo-items .todo-item {
    display: none;
    cursor: pointer;
    transition: 0.2s;
@@ -90,29 +90,31 @@ input {
    display: flex !important;
 }
 
-.todo-actions, .todo-item {
+.todo-actions, .todo-item, li {
    height: 50px;
    width: inherit;
 }
 
-ul li::before, ul li.checked::before {
+ul li::before {
    content: '';
+}
+
+ul li::before, ul li.checked::before {
    position: absolute;
 }
 
-ul li.checked {
+ul li.checked p {
    color: hsl(234, 39%, 85%);
    text-decoration: line-through;
 }
 
 ul li.checked::before {
+   content: url(../images/icon-check.svg);
    width: 18px;
    height: 18px;
-   float: left;
    margin: 15px 20px;
    border-radius: 10px;
-   background: url(../images/icon-check.svg) top left no-repeat;
-   background-color: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+   background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 }
 
 ul li p {
