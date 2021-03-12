@@ -11,21 +11,16 @@ body {
    font-size: 18px;
 }
 
-main#todo {
-   top: 100px;
-   margin: 0 auto;
+main {
+   margin: 125px auto 0;
    width: 500px;
    font-size: 12px;
    position: relative;
 }
 
-.top {
-   margin-bottom: 10px;
-}
-
 .top .app-name {
    color: white;
-   font-size: 40px;
+   font-size: 30px;
    text-align: left;
    letter-spacing: 10px;
    text-transform: uppercase;
@@ -36,15 +31,15 @@ main#todo {
    height: 26px;
    float: right;
    cursor: pointer;
-   margin-top: -35px;
+   margin-top: -36px;
    background: url(../images/icon-moon.svg) no-repeat;
 }
 
 .todo-form  {
    height: 50px;
    width: inherit;
-   margin: 30px 0;
-   display: flexbox;
+   margin: 32px 0 20px;
+   display: flex;
    border-radius: 5px;
    background-color: white;
    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
@@ -60,6 +55,7 @@ main#todo {
 }
 
 input {
+   font-family: 'Josefin Sans';
    width: 400px;
    border: none;
    outline: none;
@@ -108,7 +104,7 @@ ul li.checked p {
 
 ul li.checked::before {
    content: url(../images/icon-check.svg);
-   line-height: 1.5;
+   line-height: 1.67;
    margin: 14px 20px;
    text-align: center;
    padding: 1px 1px 0;
@@ -229,8 +225,8 @@ body.dark-mode .todo-filter {
    }
 
    main#todo {
-      top: 20px;
       width: 340px;
+      margin: 44px auto 0;
    }
 
    input {
