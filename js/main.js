@@ -4,17 +4,6 @@ function setDark() {
    element.classList.toggle("dark-mode");
 }
 
-// Add active class to the current button (highlight it)
-var todoFilter = document.getElementById("todoFilter");
-var filters = todoFilter.getElementsByTagName("span");
-for (var i = 0; i < filters.length; i++) {
-  filters[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("filter");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
 // Add new Todo and remove todo when x is clicked
 function newTodo(event) {
    var li = document.createElement("li");
@@ -48,24 +37,20 @@ function newTodo(event) {
    li.onclick = function() {
       this.classList.toggle("checked");
       if (this.classList.contains("checked")) {
+         removeClass(this, "incomplete");
          removeClass(this, "todo-item");
          addClass(this, "completed");
          countTodos();
       } else {
          removeClass(this, "completed");
+         addClass(this, "incomplete");
          addClass(this, "todo-item");
          countTodos();
       }
    };
    addClass(li, "show");
-   addClass(li, "active");
+   addClass(li, "incomplete");
    countTodos();
-}
-
-// Get the number of todos
-function countTodos() {
-   var li = document.getElementsByClassName("todo-item");
-   document.getElementById('todoCounter').innerText = li.length;
 }
 
 // Added filter methods
@@ -76,11 +61,9 @@ function filterTodos(t) {
    if (t == "all") t = "";
    for (i = 0; i < x.length; i++) {
       removeClass(x[i], "show");
-      removeClass(x[i], "todo-item");
       countTodos();
       if (x[i].className.indexOf(t) > -1) {
          addClass(x[i], "show");
-         addClass(x[i], "todo-item");
          countTodos();
       }
    }
@@ -109,14 +92,29 @@ function removeClass(element, name) {
 
 // Added function to clear completed Todos
 function clearTodos() {
-   var et, i;
-   et = document.getElementsByTagName("li");
+   var td, i;
+   td = document.getElementsByTagName("li");
    
-   for (i = 0; i < et.length; i++) {
-      if (et[i].classList.contains("checked")) {
-         et[i].remove();
-      }
+   for (i = 0; i < td.length; i++) {
+      if (td[i].classList.contains("checked")) td[i].remove();
+      countTodos();
    }
-   countTodos();
+}
+
+// Get the number of todos
+function countTodos() {
+   var li = document.getElementsByClassName("todo-item");
+   document.getElementById('todoCounter').innerText = li.length;
+}
+
+// Add active class to the current button (highlight it)
+var todoFilter = document.getElementById("todoFilter");
+var filters = todoFilter.getElementsByClassName("filter");
+for (var i = 0; i < filters.length; i++) {
+  filters[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
 

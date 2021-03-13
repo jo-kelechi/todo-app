@@ -28,13 +28,13 @@
             <span class="todo-counter">
                <label id="todoCounter"></label> items left
             </span>
-            <span id="todoClear" class="todo-clear" onclick="clearTodos()">Clear Completed</span>
+            <span class="todo-clear" onclick="clearTodos()">Clear Completed</span>
          </div>
       </div>
       <div id="todoFilter" class="todo-filter">
          <span class="filter active" onclick="filterTodos('all')">All</span>
-         <span onclick="filterTodos('active')">Active</span>
-         <span onclick="filterTodos('completed')">Completed</span>
+         <span class="filter" onclick="filterTodos('incomplete')">Active</span>
+         <span class="filter" onclick="filterTodos('completed')">Completed</span>
       </div>
       <p>Drag and drop to reorder list</p>
    </main>    
