@@ -76,3 +76,15 @@ Feedback is always welcome, so if you have any to give on this challenge please 
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+## Deployment link
+
+Here's the link to the project hosted at Vercel. You can have fun playing around with it.
+You can also drop a review, if you feel like it.
+
+[Todo App](https://todo-app-jo-kelechi.vercel.app/)
+
+## Demo
+
+[![todo.gif](https://i.postimg.cc/PrCY9rtB/todo.gif)](https://postimg.cc/1fZ8NSVH)
