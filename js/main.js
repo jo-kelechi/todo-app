@@ -92,12 +92,10 @@ function removeClass(element, name) {
 
 // Added function to clear completed Todos
 function clearTodos() {
-   var td, i;
-   td = document.getElementsByTagName("li");
+   var td = document.getElementsByTagName("li");   
    
-   for (i = 0; i < td.length; i++) {
-      if (td[i].classList.contains("checked")) td[i].remove();
-      countTodos();
+   for (var i of td) {
+      if (i.classList.contains("checked")) i.remove();
    }
 }
 
